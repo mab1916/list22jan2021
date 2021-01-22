@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+<style>
+    div#idDelete, div#titleDelete, div#DescDelete, div#dateDelete{
+        list-style: none;
+        float: left;
+    }
+    tr, th, td{
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+    <h4>
+        Enter Details
+    </h4>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>
+                <input type="text" id="todoId" placeholder="Enter ID">
+            </td>
+        </tr>
+        <tr>
+            <td>Title</td>
+            <td>
+                <input type="text" id="todoTitle" placeholder="Enter Title">
+            </td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>
+                <textarea name="todoDesc" id="todoDesc"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>
+                <input type="date" id="todoDate" value="Select Date">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button onclick="Add()">Add</button>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>DESCRIPTION</th>
+            <th>DATE</th>
+        </tr>
+        <tr>
+            <!-- <div id="idDelete" onclick="Delete()"> -->
+            <td>
+                <div id="idDelete" onclick="IdDelete()" >
+                    <div id="todoViewId" ></div>
+                </div>
+            </td>
+            <td>
+                <div id="titleDelete" onclick="TitleDelete()" >
+                    <div id="todoViewTitle" ></div>
+                </div>
+            </td>
+            <td>
+                <div id="DescDelete" onclick="DescDelete()" >
+                    <div id="todoViewDecs" ></div>
+                </div>
+            </td>
+            <td>
+                <div id="dateDelete" onclick="DateDelete()" >
+                    <div id="todoViewDate" ></div>
+                </div>
+            </td>
+        <!-- </div> -->
+        </tr>
+    </table>
+
+    <script src="./11th Assignment List.js"></script>
+</body>
+</html>
